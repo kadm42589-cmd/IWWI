@@ -8,6 +8,9 @@ import info.iwwi.addon.modules.MineToYMinus50;
 import info.iwwi.addon.modules.ElytraAutoFly;
 import info.iwwi.addon.modules.AutoSpawnerBreakerBaritone;
 import info.iwwi.addon.modules.AutoSpawnerChestClicker;
+import info.iwwi.addon.modules.AutoAHSniper;
+import info.iwwi.addon.modules.AutoTPAModule;
+import info.iwwi.addon.modules.StoneESP;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -28,6 +31,9 @@ public class IWWIAddon extends MeteorAddon {
     Modules.get().add(new AutoMineDownRTP());
     Modules.get().add(new AutoSpawnerBreakerBaritone());
     Modules.get().add(new AutoSpawnerChestClicker());
+    Modules.get().add(new AutoAHSniper());
+    Modules.get().add(new AutoTPAModule());
+    Modules.get().add(new StoneESP());
     }
 
     @Override

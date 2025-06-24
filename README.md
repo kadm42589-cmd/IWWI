@@ -1,8 +1,8 @@
-# 🚀 IWWI – Meteor Addon for DonutSMP (v1.21.4)
+# 🚀 IWWI – Meteor Addon for DonutSMP (v1.21.5)
 
 Welcome to **IWWI** – the ultimate strategic automation addon built for the [Meteor Client](https://meteorclient.com/) on **Minecraft 1.21.5**, specifically designed for **DonutSMP**. Dominate the underground meta, manage your resources with precision, and stay 10 steps ahead of your enemies!
 
-> ⚠️ Requires Meteor Client 1.21.4 and Baritone for some features  
+> ⚠️ Requires Meteor Client 1.21.5 and Baritone for some features  
 > 🌐 Supports optional **Discord Webhook** notifications for key modules
 
 ---
@@ -46,7 +46,7 @@ Can fly long distances across terrain, oceans, or nether tunnels without crashin
 ---
 
 ### 🎒 StashFinder *  
-Scans and logs the presence of **unclaimed or hidden stashes** such as chest clusters and shulkers.  
+Scans and logs the presence of **hidden stashes** such as chest clusters and shulkers.  
 When a stash is found, you’ll get a ping on your configured webhook.
 
 > 🔔 **Supports Discord Webhook notifications**
@@ -59,13 +59,39 @@ Can help uncover bedrock-layer vaults or trap setups.
 
 ---
 
+### 🤝 AutoTPA/TPAHere
+Automates the process of sending repeated **/tpa** or **/tpahere** requests to a specified player.  
+Configure the target nickname, delay between requests, and command type. The module will send 15 requests in rapid succession (with your chosen delay), pause for 2–6 seconds, and repeat the cycle until deactivated.  
+
+> **❗ Note:** On DonutSMP, you must **disable TPA confirm menus** in your server settings for this module to work automatically.
+
+---
+
+### 🎯 Auto AH Sniper
+An intelligent Auction House sniper designed to automatically purchase items at or below your specified maximum price.
+Perfect for catching underpriced deals on valuable items like Elytras or enchanted gear on DonutSMP.
+
+**Key Features:**
+- **Item & Price Targeting:** Select a specific item and set your maximum bid.
+- **Intelligent Price Parsing:** Correctly understands suffixes like `K` (thousands), `M` (millions), and `B` (billions).
+- **Inventory Check:** Automatically pauses if your inventory is full to prevent losing items.
+
+> - All Items Mode ignores the selected item and attempts to purchase *any* item listed for a price at or below your configured maximum.
+
+---
+### 🗿 Stone ESP
+A module that will find player placed blocks and alert you by making a esp around it and with chosable chat feedback
+- **False detection:** there can be some false detection sometimes if there is specific structeres
+- **Where to use:** The stone esp is ment to be used in the air using a elytra or just over the ground in general
+---
+
 ## 🔧 Setup & Installation
 
 1. 📥 Download the latest build of **IWWI** from the [official website](http://iwwi.info) tab.
 2. Move the `.jar` file to your `.minecraft/mods` folder
 3. (Optional) Configure your **Discord Webhook URL** in the settings of modules marked with `*` for remote notifications.
-4. Launch Minecraft 1.21.4 with Meteor Client + Baritone and enjoy!
-
+4. Launch Minecraft 1.21.5 with Meteor Client + Baritone and enjoy!
+5. 
 ---
 
 ## 💬 Webhook Integration
