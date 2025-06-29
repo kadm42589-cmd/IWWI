@@ -83,6 +83,17 @@ Perfect for catching underpriced deals on valuable items like Elytras or enchant
 A module that will find player placed blocks and alert you by making a esp around it and with chosable chat feedback
 - **False detection:** there can be some false detection sometimes if there is specific structeres
 - **Where to use:** The stone esp is ment to be used in the air using a elytra or just over the ground in general
+
+---
+
+### 📦 AutoShulker
+Automates the process of buying shulker boxes from the shop and managing orders to generate infinite money. Streamlines the bulk purchase workflow for maximum profit generation.
+
+---
+
+### 🎯 AntiTrap
+Prevents rendering of trap-related entities like armor stands, item frames, paintings, and leash knots. Useful for avoiding traps on DonutSMP.
+
 ---
 
 ## 🔧 Setup & Installation
