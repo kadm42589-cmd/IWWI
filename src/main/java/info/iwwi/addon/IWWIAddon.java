@@ -11,6 +11,8 @@ import info.iwwi.addon.modules.AutoSpawnerChestClicker;
 import info.iwwi.addon.modules.AutoAHSniper;
 import info.iwwi.addon.modules.AutoTPAModule;
 import info.iwwi.addon.modules.StoneESP;
+import info.iwwi.addon.modules.AntiTrap;
+import info.iwwi.addon.modules.AutoShulker;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -34,6 +36,8 @@ public class IWWIAddon extends MeteorAddon {
     Modules.get().add(new AutoAHSniper());
     Modules.get().add(new AutoTPAModule());
     Modules.get().add(new StoneESP());
+    Modules.get().add(new AntiTrap());
+        Modules.get().add(new AutoShulker());
     }
 
     @Override

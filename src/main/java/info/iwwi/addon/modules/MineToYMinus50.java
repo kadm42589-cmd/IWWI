@@ -6,6 +6,8 @@ import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import meteordevelopment.orbit.EventHandler;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
 
 public class MineToYMinus50 extends Module {
@@ -145,7 +147,7 @@ public class MineToYMinus50 extends Module {
                 rtpStage++;
                 rtpStageStart = now;
             } else if (rtpStage == 2 && stageElapsed >= postRtpDelaySeconds.get() * 1000L) {
-                mc.player.networkHandler.sendChatMessage("#goto ~ " + targetY.get() + " ~");
+                mc.player.networkHandler.sendChatMessage("#goto " + targetY.get());
                 miningStarted = true;
                 tunnelStarted = false;
                 triggeredRtp = false;
@@ -157,7 +159,7 @@ public class MineToYMinus50 extends Module {
         }
 
         if (!miningStarted && !tunnelStarted && playerY > targetY.get()) {
-            mc.player.networkHandler.sendChatMessage("#goto ~ " + targetY.get() + " ~");
+            mc.player.networkHandler.sendChatMessage("#goto " + targetY.get());
             miningStarted = true;
         }
 
@@ -165,6 +167,22 @@ public class MineToYMinus50 extends Module {
             mc.player.networkHandler.sendChatMessage("#tunnel");
             tunnelStarted = true;
         }
+
+
+        if (mc.currentScreen != null && mc.player.currentScreenHandler != null) {
+            if (isInventoryFull()) {
+                mc.player.closeHandledScreen();
+            }
+        }
+    }
+
+    private boolean isInventoryFull() {
+        for (int i = 9; i <= 35; i++) {
+            ItemStack stack = mc.player.getInventory().getStack(i);
+            if (stack.isEmpty()) return false;
+            if (stack.getItem() == Items.BONE && stack.getCount() < stack.getMaxCount()) return false;
+        }
+        return true;
     }
 
     public enum RTPRegion {
